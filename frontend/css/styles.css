@@ -1,0 +1,303 @@
+/* Security Analyzer Pro - Full Recolor Theme */
+:root {
+    --bg-main: #f8f7f2;
+    --bg-accent: #f3efe2;
+    --surface: #ffffff;
+    --surface-soft: #f5f1e6;
+    --text-main: #3697cb;
+    --text-muted: #5f6f77;
+    --border: #d8d1bf;
+
+    --brand: #0f766e;
+    --brand-deep: #0b5e57;
+    --accent: #d97706;
+
+    --ok: #2f855a;
+    --warn: #b7791f;
+    --danger: #c53030;
+
+    --brand-glow: 0 8px 24px rgba(15, 118, 110, 0.18);
+    --surface-glow: 0 10px 30px rgba(15, 118, 110, 0.08);
+}
+
+body {
+    background: radial-gradient(circle at top left, #fffef9 0%, var(--bg-main) 45%, var(--bg-accent) 100%) !important;
+    color: var(--text-main) !important;
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* Bootstrap utility color overrides used heavily in index.html */
+.bg-dark,
+.bg-secondary-subtle,
+.bg-transparent {
+    background-color: var(--surface) !important;
+}
+
+.text-light {
+    color: var(--text-main) !important;
+}
+
+.text-secondary {
+    color: var(--text-muted) !important;
+}
+
+.border-secondary,
+.border-success,
+.border-danger,
+.border-info,
+.border-warning,
+.border-primary {
+    border-color: var(--border) !important;
+}
+
+.bg-primary,
+.bg-primary.bg-opacity-25 {
+    background: linear-gradient(135deg, var(--brand), var(--brand-deep)) !important;
+    color: #f7fffd !important;
+}
+
+.bg-success,
+.bg-success.bg-opacity-25 {
+    background: linear-gradient(135deg, #2f855a, #256c48) !important;
+    color: #f7fff9 !important;
+}
+
+.bg-danger,
+.bg-danger.bg-opacity-25 {
+    background: linear-gradient(135deg, #c53030, #a52626) !important;
+    color: #fff7f7 !important;
+}
+
+.bg-info,
+.bg-info.bg-opacity-25 {
+    background: linear-gradient(135deg, #0ea5a6, #0b8687) !important;
+    color: #f5ffff !important;
+}
+
+.bg-warning,
+.bg-warning.bg-opacity-25 {
+    background: linear-gradient(135deg, #d69e2e, #b8841f) !important;
+    color: #2b1f00 !important;
+}
+
+.navbar {
+    box-shadow: var(--brand-glow);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #f7fffd !important;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: #f7fffd;
+    border-radius: 2px;
+}
+
+.card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--surface-glow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(243, 245, 244, 0.876);
+}
+
+.card-header {
+    font-weight: 650;
+    letter-spacing: 0.2px;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+    background: #ffffff !important;
+    border-color: var(--border) !important;
+    color: #e4edf1 !important;
+}
+
+.form-control::placeholder,
+.form-select::placeholder,
+textarea.form-control::placeholder {
+    color: #7a8a91 !important;
+    opacity: 1;
+}
+
+input.form-control:-webkit-autofill,
+textarea.form-control:-webkit-autofill,
+select.form-select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    -webkit-text-fill-color: #c8d3da;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand) !important;
+    box-shadow: 0 0 0 0.22rem rgba(15, 118, 110, 0.18) !important;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-radius: 0.55rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+    border: none;
+    box-shadow: var(--brand-glow);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #c53030, #a52626);
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2f855a, #256c48);
+    border: none;
+}
+
+.btn-outline-secondary,
+.btn-outline-light {
+    border-color: #9ba8af !important;
+    color: var(--text-main) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-light:hover {
+    background: #ecf0f1 !important;
+    color: #1e2a31 !important;
+}
+
+.alert {
+    border-width: 1px;
+}
+
+.alert-success {
+    background: rgba(47, 133, 90, 0.13) !important;
+    border-color: rgba(47, 133, 90, 0.35) !important;
+    color: #245e41 !important;
+}
+
+.alert-warning {
+    background: rgba(183, 121, 31, 0.13) !important;
+    border-color: rgba(183, 121, 31, 0.35) !important;
+    color: #6f4a12 !important;
+}
+
+.alert-danger {
+    background: rgba(197, 48, 48, 0.11) !important;
+    border-color: rgba(197, 48, 48, 0.35) !important;
+    color: #8e2020 !important;
+}
+
+.alert-info {
+    background: rgba(14, 165, 166, 0.11) !important;
+    border-color: rgba(14, 165, 166, 0.3) !important;
+    color: #0c6667 !important;
+}
+
+.list-group-item {
+    background: #fffefb !important;
+    border-color: #e4dcc7 !important;
+    color: var(--text-main);
+}
+
+.list-group-item:hover {
+    background: #f7f3e7 !important;
+}
+
+.badge {
+    font-weight: 600;
+}
+
+.bg-success-subtle {
+    background: rgba(219, 229, 224, 0.14) !important;
+}
+
+.text-success-emphasis {
+    color: #245e41 !important;
+}
+
+.progress {
+    background-color: #e9e1cd !important;
+}
+
+.progress-bar {
+    transition: width 0.35s ease;
+}
+
+.progress-bar.bg-warning {
+    background: linear-gradient(135deg, #d69e2e, #b8841f) !important;
+}
+
+.progress-bar.bg-success {
+    background: linear-gradient(135deg, #2f855a, #256c48) !important;
+}
+
+.progress-bar.bg-danger {
+    background: linear-gradient(135deg, #c53030, #a52626) !important;
+}
+
+.tab-pane {
+    animation: fadeIn 0.28s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ece6d6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5b796;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ac9d79;
+}
+
+@media (max-width: 768px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .display-4 {
+        font-size: 2.4rem;
+    }
+}
+
+@media print {
+    body {
+        background: #fff !important;
+        color: #f45959 !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+}
